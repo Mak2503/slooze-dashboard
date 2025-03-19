@@ -1,6 +1,6 @@
 import { Bell, Calendar, PanelLeftDashedIcon, Settings } from "lucide-react";
 import React from "react";
-import Input from "../Common/Input";
+import Input from "../common/Input";
 import Image from "next/image";
 
 const Navbar = ({ handleMinimize }: { handleMinimize: () => void }) => {

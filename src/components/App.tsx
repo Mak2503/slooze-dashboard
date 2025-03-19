@@ -1,7 +1,7 @@
-"use client"
+"use client";
 import React, { useState } from "react";
-import SideNavbar from "./Navbar/SideNavbar";
-import Navbar from "./Navbar/Navbar";
+import SideNavbar from "./navbar/SideNavbar";
+import Navbar from "./navbar/Navbar";
 
 const App = ({
   children,
@@ -12,7 +12,7 @@ const App = ({
 
   const handleMinimize = () => {
     setMinimizeSidebar((prev) => !prev);
-  }
+  };
 
   return (
     <div className="flex h-screen">
