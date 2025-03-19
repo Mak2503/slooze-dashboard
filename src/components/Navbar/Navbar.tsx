@@ -5,19 +5,20 @@ import Image from "next/image";
 
 const Navbar = ({ handleMinimize }: { handleMinimize: () => void }) => {
   return (
-    <div className="p-3.5 bg-[#4F45E4] flex justify-between items-center">
+    <div className="py-3.5 px-6 bg-[#4F45E4] flex justify-between items-center">
       <div className="flex items-center gap-4">
         <PanelLeftDashedIcon
           color="white"
+          size={20}
           className="cursor-pointer"
           onClick={handleMinimize}
         />
         <Input placeholder="Search" />
       </div>
       <div className="flex items-center gap-4">
-        <Calendar color="white" />
-        <Bell color="white" />
-        <Settings color="white" />
+        <Calendar color="white" size={20} />
+        <Bell color="white" size={20} />
+        <Settings color="white" size={20} />
         <div className="py-2 px-4 rounded-lg bg-[#3830B7] flex items-center gap-2">
           <div className="text-[11px] text-white">
             <p>rohan@etis.xyz</p>

@@ -5,7 +5,7 @@ import SideFooter from "./SideFooter";
 
 const SideNavbar = ({ minimize }: { minimize: boolean }) => {
   return (
-    <div className="py-6 px-4 border-r border-[#0000001A] flex flex-col justify-between">
+    <div className="bg-white py-6 px-4 border-r border-[#0000001A] flex flex-col justify-between">
       <div className="space-y-8">
         <div className="flex items-center gap-2">
           <Image src={"/slooze-logo.svg"} width={40} height={40} alt="logo" />

@@ -74,7 +74,7 @@ const NavItem: React.FC<{
 
 const NavList = ({ minimize }: { minimize: boolean }) => {
   return (
-    <div className="space-y-3">
+    <div className="space-y-4">
       {navItems.map((item, index) => (
         <NavItem
           key={index}

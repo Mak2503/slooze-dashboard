@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useCallback, useState } from "react";
 import SideNavbar from "./navbar/SideNavbar";
 import Navbar from "./navbar/Navbar";
 
@@ -10,16 +10,18 @@ const App = ({
 }>) => {
   const [minimizeSidebar, setMinimizeSidebar] = useState(false);
 
-  const handleMinimize = () => {
+  const handleMinimize = useCallback(() => {
     setMinimizeSidebar((prev) => !prev);
-  };
+  }, []);
 
   return (
     <div className="flex h-screen">
       <SideNavbar minimize={minimizeSidebar} />
       <div className="w-full">
         <Navbar handleMinimize={handleMinimize} />
-        {children}
+        <div className="overflow-auto">
+          {children}
+        </div>
       </div>
     </div>
   );
