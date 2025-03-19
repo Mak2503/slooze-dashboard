@@ -9,7 +9,7 @@ const Badge = ({
 }) => {
   return (
     <div
-      className={`flex items-center gap-2 text-[11px] font-bold bg-[#F7F9FB] border border-[#E5E5E5] rounded-full p-1 ${className}`}
+      className={`flex h-max items-center gap-1 text-[11px] font-bold bg-[#F7F9FB] border border-[#E5E5E5] p-1 rounded-full ${className}`}
     >
       {children}
     </div>

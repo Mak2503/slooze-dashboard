@@ -3,7 +3,7 @@ import React from "react";
 import Input from "../common/Input";
 import Image from "next/image";
 
-const Navbar = ({ handleMinimize }: { handleMinimize: () => void }) => {
+const Navbar = ({ toggleSidebar }: { toggleSidebar: () => void }) => {
   return (
     <div className="py-3.5 px-6 bg-[#4F45E4] flex justify-between items-center">
       <div className="flex items-center gap-4">
@@ -11,7 +11,7 @@ const Navbar = ({ handleMinimize }: { handleMinimize: () => void }) => {
           color="white"
           size={20}
           className="cursor-pointer"
-          onClick={handleMinimize}
+          onClick={toggleSidebar}
         />
         <Input placeholder="Search" />
       </div>

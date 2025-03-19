@@ -10,7 +10,7 @@ const App = ({
 }>) => {
   const [minimizeSidebar, setMinimizeSidebar] = useState(false);
 
-  const handleMinimize = useCallback(() => {
+  const toggleSidebar = useCallback(() => {
     setMinimizeSidebar((prev) => !prev);
   }, []);
 
@@ -18,7 +18,7 @@ const App = ({
     <div className="flex h-screen">
       <SideNavbar minimize={minimizeSidebar} />
       <div className="w-full">
-        <Navbar handleMinimize={handleMinimize} />
+        <Navbar toggleSidebar={toggleSidebar} />
         <div className="overflow-auto">
           {children}
         </div>
