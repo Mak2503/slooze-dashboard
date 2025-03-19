@@ -1,5 +1,9 @@
+import Header from "@/components/Header";
+
 export default function Home() {
   return (
-    <main>Hello World</main>
+    <main>
+      <Header />
+    </main>
   );
 }
