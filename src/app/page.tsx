@@ -1,6 +1,6 @@
 import PaymentInfoCard from "@/components/common/PaymentInfoCard";
 import Header from "@/components/Header";
-import InventoryOverview from "@/components/inventory/Overview";
+import InventoryOverview from "@/components/inventory-overview/Overview";
 import { paymentInfo } from "@/utils/mock-data";
 
 export default function Home() {
