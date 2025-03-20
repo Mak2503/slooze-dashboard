@@ -49,7 +49,7 @@ const InventoryOverviewChart = () => {
   return (
     <>
       <div className="flex items-center relative">
-        <p className="absolute left-[-50px] top-[50%] z-50 transform rotate-270 text-xs text-nowrap opacity-50 w-max h-max">Total items (in 1000s)</p>
+        <p className="absolute left-[-50px] top-[50%] z-10 transform rotate-270 text-xs text-nowrap opacity-50 w-max h-max">Total items (in 1000s)</p>
         <ResponsiveContainer width={"100%"} height={250}>
           <BarChart
             data={data}
