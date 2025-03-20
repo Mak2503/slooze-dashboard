@@ -1,4 +1,5 @@
 import React, { ReactNode } from "react";
+import { twMerge } from "tailwind-merge";
 
 const Badge = ({
   children,
@@ -9,7 +10,7 @@ const Badge = ({
 }) => {
   return (
     <div
-      className={`flex h-max items-center gap-1 text-[11px] font-bold bg-[#F7F9FB] border border-[#E5E5E5] p-1 rounded-full ${className}`}
+      className={twMerge(`flex h-max items-center gap-1 text-[11px] font-bold bg-[#F7F9FB] border border-[#E5E5E5] p-1 rounded-full`, className)}
     >
       {children}
     </div>

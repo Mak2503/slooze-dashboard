@@ -1,4 +1,5 @@
 import React, { ReactNode } from "react";
+import { twMerge } from "tailwind-merge";
 
 const Card = ({
   children,
@@ -8,7 +9,7 @@ const Card = ({
   className?: string;
 }) => {
   return (
-    <div className={`p-3.5 w-full border border-[#E5E5E5] rounded-xl bg-white ${className}`}>
+    <div className={twMerge(`p-3.5 w-full border border-[#E5E5E5] bg-white rounded-xl`, className)}>
       {children}
     </div>
   );
