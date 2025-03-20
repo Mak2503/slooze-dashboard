@@ -66,7 +66,7 @@ const NavItem: React.FC<{
         {icon}
       </div>
       {minimize && (
-        <p className={`${active && "text-[#4F45E4] font-semibold"}`}>{name}</p>
+        <p className={`${active && "text-[#4F45E4] font-semibold"} text-sm`}>{name}</p>
       )}
     </div>
   );

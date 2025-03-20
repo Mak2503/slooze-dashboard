@@ -17,7 +17,7 @@ const App = ({
   return (
     <div className="flex h-screen">
       <SideNavbar minimize={minimizeSidebar} />
-      <div className="w-full pl-[70px]">
+      <div className={`w-full ${minimizeSidebar ? "pl-[160px]" : "pl-[70px]"}`}>
         <Navbar toggleSidebar={toggleSidebar} />
         <div className="overflow-auto">
           {children}
