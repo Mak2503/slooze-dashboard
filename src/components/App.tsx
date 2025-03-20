@@ -1,7 +1,7 @@
 "use client";
 import React, { useCallback, useState } from "react";
-import SideNavbar from "./navbar/SideNavbar";
-import Navbar from "./navbar/Navbar";
+import SideNavbar from "./Navbar/SideNavbar";
+import Navbar from "./Navbar/Navbar";
 
 const App = ({
   children,

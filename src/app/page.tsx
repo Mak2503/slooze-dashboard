@@ -1,6 +1,7 @@
-import PaymentInfoCard from "@/components/common/PaymentInfoCard";
+import PaymentInfoCard from "@/components/Common/PaymentInfoCard";
 import Header from "@/components/Header";
-import InventoryOverview from "@/components/inventory-overview/Overview";
+import InventoryOverview from "@/components/InventoryOverview/InventoryOverview";
+import ShipmentAnalysis from "@/components/ShipmentAnalytics/ShipmentAnalytics";
 import { paymentInfo } from "@/utils/mock-data";
 
 export default function Home() {
@@ -22,10 +23,13 @@ export default function Home() {
             />
           ))}
         </div>
-        {/* Inventrory & Shipment */}
-        <div className="flex justify-between items-center gap-4">
+        {/* Inventory & Shipment */}
+        <div className="flex justify-between gap-4">
           <div className="w-2/5">
             <InventoryOverview />
+          </div>
+          <div className="w-3/5">
+            <ShipmentAnalysis />
           </div>
         </div>
       </div>

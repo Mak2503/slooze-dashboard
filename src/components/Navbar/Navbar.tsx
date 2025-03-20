@@ -1,6 +1,6 @@
 import { Bell, Calendar, PanelLeftDashedIcon, Settings } from "lucide-react";
 import React from "react";
-import Input from "../common/Input";
+import Input from "../Common/Input";
 import Image from "next/image";
 
 const Navbar = ({ toggleSidebar }: { toggleSidebar: () => void }) => {

@@ -1,7 +1,7 @@
 "use client"
 import React, { useCallback, useState } from "react";
-import Toggle from "../common/Toggle";
-import Card from "../common/Card";
+import Toggle from "../Common/Toggle";
+import Card from "../Common/Card";
 import InventoryOverviewChart from "./InventoryChart";
 
 const InventoryOverview = () => {
