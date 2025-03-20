@@ -1,4 +1,3 @@
-import React from "react";
 import {
   Bar,
   BarChart,
@@ -7,24 +6,26 @@ import {
   XAxis,
 } from "recharts";
 
-type OverviewChartType = {
+type InventoryOverviewChartDataType = {
   name: string;
   sales: number;
   purchases: number;
 };
 
-interface OverviewChartProps {
-  data: OverviewChartType[];
+interface InventoryOverviewChartProps {
+  data: InventoryOverviewChartDataType[];
 }
 
-const InventoryOverviewChart: React.FC<OverviewChartProps> = ({ data }) => {
+const InventoryOverviewChart: React.FC<InventoryOverviewChartProps> = ({
+  data,
+}) => {
   return (
     <>
       <div className="flex items-center relative">
         <p className="h-max text-nowrap text-xs w-max absolute left-[-50px] opacity-50 rotate-270 top-[50%] transform z-10">
           Total items (in 1000s)
         </p>
-        <ResponsiveContainer width={"100%"} height={205}>
+        <ResponsiveContainer width="100%" height={205}>
           <BarChart
             data={data}
             margin={{

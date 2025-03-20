@@ -8,7 +8,7 @@ export const paymentInfo = [
     amount: 1240000,
     percentage: 3.87,
     subText: "Overdue payments: 1,40,000",
-    iconBgColor: "bg-[#05BF8F1A]",
+    iconBgColor: "#05BF8F1A",
   },
   {
     id: 2,
@@ -17,7 +17,7 @@ export const paymentInfo = [
     amount: 950000,
     percentage: undefined,
     subText: "next payment due: 1 week",
-    iconBgColor: "bg-[#4F45E41A]",
+    iconBgColor: "#4F45E41A",
   },
   {
     id: 3,
@@ -26,7 +26,7 @@ export const paymentInfo = [
     amount: 1520000,
     percentage: -5.89,
     subText: "suppliers: 6",
-    iconBgColor: "bg-[#FF900D1A]",
+    iconBgColor: "#FF900D1A",
   },
   {
     id: 4,
@@ -35,7 +35,7 @@ export const paymentInfo = [
     amount: 1800000,
     percentage: 3.87,
     subText: "top selling product: electronics",
-    iconBgColor: "bg-[#7A21EB1A]",
+    iconBgColor: "#7A21EB1A",
   },
 ];
 

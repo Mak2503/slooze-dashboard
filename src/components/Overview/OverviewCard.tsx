@@ -1,10 +1,9 @@
-import React from "react";
-import Card from "./Card";
 import Image from "next/image";
+import Card from "../Common/Card";
 import { MoveDownRight, MoveUpRight } from "lucide-react";
 import { rupeeConverter } from "@/utils/utils";
 
-interface PaymentInfoCardProps {
+interface OverviewCardProps {
   title: string;
   iconPath: string;
   amount: number;
@@ -27,7 +26,7 @@ const ShowTrend = ({ percentage }: { percentage: number }) => {
   );
 };
 
-const PaymentInfoCard: React.FC<PaymentInfoCardProps> = ({
+const OverviewCard: React.FC<OverviewCardProps> = ({
   title,
   iconPath,
   amount,
@@ -49,19 +48,22 @@ const PaymentInfoCard: React.FC<PaymentInfoCardProps> = ({
                 percentage! > 0 ? "text-green-600" : "text-red-600"
               } text-xxs flex items-center mt-2`}
             >
-              {percentage !== undefined && (
-                <ShowTrend percentage={percentage} />
-              )}
+              {percentage && <ShowTrend percentage={percentage} />}
             </span>
           </div>
-          <p className="text-xs font-semibold opacity-30 uppercase">{subText}</p>
+          <p className="text-xs font-semibold opacity-30 uppercase">
+            {subText}
+          </p>
         </div>
-        <div className={`p-2 ${iconBgColor} rounded-md h-max`}>
-          <Image src={iconPath} alt={iconPath} width={18} height={18} />
+        <div
+          className="h-max p-2 rounded-md"
+          style={{ backgroundColor: iconBgColor }}
+        >
+          <Image src={iconPath} alt={iconPath} width={20} height={20} />
         </div>
       </div>
     </Card>
   );
 };
 
-export default PaymentInfoCard;
+export default OverviewCard;

@@ -1,5 +1,4 @@
 import { rupeeConverter } from "@/utils/utils";
-import React from "react";
 
 interface ItemCardProps {
   id: number;
@@ -18,11 +17,11 @@ const ItemCard: React.FC<ItemCardProps> = ({
 }) => {
   const unitsOrValue =
     activeTab === "vol." ? (
-      <div className="border border-[#E9E9E9] p-2 rounded-lg text-sm font-semibold">
+      <div className="border border-[#E9E9E9] rounded-lg text-sm font-semibold px-1 py-0.5">
         {units} Units
       </div>
     ) : (
-      <div className="border border-primaryBg p-2 text-sm font-semibold">
+      <div className="border border-primaryBg text-sm font-semibold px-1 py-0.5">
         {rupeeConverter(value)}
       </div>
     );

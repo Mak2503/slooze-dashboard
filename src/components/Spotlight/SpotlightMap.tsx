@@ -1,4 +1,3 @@
-import React from "react";
 import Badge from "../Common/Badge";
 import Image from "next/image";
 import SupplierClient from "./SupplierClient";
@@ -8,7 +7,7 @@ const SpotlightMap = () => {
     <div className="w-5/12">
       <div className="flex justify-between items-center">
         <h3 className="font-bold">Spotlight</h3>
-        <Badge className="rounded-md p-2">ALL REGIONS</Badge>
+        <Badge className="p-2 rounded-md">ALL REGIONS</Badge>
       </div>
       <div className="relative">
         <Image src="/worldmap.svg" alt="worldmap" width={630} height={270} />

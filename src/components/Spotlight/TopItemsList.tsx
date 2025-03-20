@@ -1,5 +1,5 @@
 "use client";
-import React, { useCallback, useState } from "react";
+import { useCallback, useState } from "react";
 import Toggle from "../Common/Toggle";
 import ItemCard from "./ItemCard";
 
@@ -19,7 +19,7 @@ const TopItemsList: React.FC<TopItemsListProps> = ({ title, items }) => {
   const [tab, setTab] = useState("value");
 
   const toggleTab = useCallback(() => {
-    setTab((prev) => (prev === "value" ? "vol." : "value"));
+    setTab((prevTab) => (prevTab === "value" ? "vol." : "value"));
   }, []);
 
   return (

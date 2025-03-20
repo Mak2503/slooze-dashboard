@@ -1,3 +1,5 @@
+"use client";
+import { useState } from "react";
 import {
   BookUser,
   Box,
@@ -9,7 +11,7 @@ import {
   ShoppingBag,
   SquareCode,
 } from "lucide-react";
-import React, { ReactNode } from "react";
+import NavItem from "./NavItem";
 
 const navItems = [
   {
@@ -50,41 +52,18 @@ const navItems = [
   },
 ];
 
-const NavItem: React.FC<{
-  active?: boolean;
-  icon: ReactNode;
-  name?: string;
-  minimize: boolean;
-}> = ({ active = false, icon, name, minimize }) => {
-  return (
-    <div className="flex cursor-pointer gap-2 items-center">
-      <div
-        className={`${
-          active && "text-white bg-primary"
-        } text-[#0000007A] p-1.5 rounded-md`}
-      >
-        {icon}
-      </div>
-      {minimize && (
-        <p className={`${active && "text-primary font-semibold"} text-sm hover:scale-105 hover:text-primary transition-all`}>
-          {name}
-        </p>
-      )}
-    </div>
-  );
-};
-
-const NavList = ({ minimize }: { minimize: boolean }) => {
+const NavList = ({ toggleSidebar }: { toggleSidebar: boolean }) => {
+  const [selectedTab, setSelectedTab] = useState("Dashboard");
   return (
     <div className="space-y-4">
       {navItems.map((item, index) => (
-        <NavItem
-          key={index}
-          active={index === 0 && true}
-          icon={item.icon}
-          name={item.name}
-          minimize={minimize}
-        />
+        <div key={index} onClick={() => setSelectedTab(item.name)}>
+          <NavItem
+            {...item}
+            active={selectedTab === item.name}
+            toggleSidebar={toggleSidebar}
+          />
+        </div>
       ))}
     </div>
   );

@@ -1,22 +1,24 @@
-import { Settings } from "lucide-react";
 import Image from "next/image";
-import React from "react";
+import { Settings } from "lucide-react";
 
-const SideFooter = ({ minimize }: { minimize: boolean }) => {
+const SideFooter = ({ toggleSidebar }: { toggleSidebar: boolean }) => {
   return (
-    <div className="space-y-1">
-      <div className="flex items-center gap-1">
-        <div className="p-2 rounded-md">
-          <Image src={"/help.svg"} alt="help" width={24} height={24} />
-        </div>
-        {minimize && <p>Help</p>}
+    <div className="space-y-4">
+      <div className="flex border-b-2 border-black/10 gap-1 items-center py-4">
+        <Image
+          src="/help.svg"
+          alt="help"
+          width={24}
+          height={24}
+          className="rounded-md mx-2"
+        />
+        {toggleSidebar && <p>Help</p>}
       </div>
-      <div className="h-0.5 bg-black/10"></div>
-      <div className="flex items-center gap-1">
+      <div className="flex gap-1 items-center">
         <div className="bg-[#F4F4F4] p-2 rounded-md">
           <Settings />
         </div>
-        {minimize && <p>Settings</p>}
+        {toggleSidebar && <p>Settings</p>}
       </div>
     </div>
   );

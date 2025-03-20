@@ -1,4 +1,3 @@
-import React from "react";
 import Card from "../Common/Card";
 import Badge from "../Common/Badge";
 import { SlidersHorizontal } from "lucide-react";
@@ -7,7 +6,7 @@ import TrackLocation from "./TrackLocation";
 
 const ShipmentAnalytics = () => {
   return (
-    <Card>
+    <Card className="w-3/5">
       <div className="space-y-4">
         <div className="flex justify-between items-center">
           <h3 className="w-1/3 font-bold">Shipment Analytics</h3>
@@ -23,7 +22,7 @@ const ShipmentAnalytics = () => {
             </Badge>
           </div>
         </div>
-        <div className="flex gap-4">
+        <div className="flex gap-2">
           <ShipmentList />
           <TrackLocation />
         </div>

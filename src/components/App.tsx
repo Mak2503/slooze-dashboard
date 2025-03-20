@@ -1,5 +1,5 @@
 "use client";
-import React, { useCallback, useState } from "react";
+import { useCallback, useState } from "react";
 import SideNavbar from "./Navbar/SideNavbar";
 import Navbar from "./Navbar/Navbar";
 
@@ -8,18 +8,18 @@ const App = ({
 }: Readonly<{
   children: React.ReactNode;
 }>) => {
-  const [minimizeSidebar, setMinimizeSidebar] = useState(false);
+  const [toggleSidebar, setToggleSidebar] = useState(true);
 
-  const toggleSidebar = useCallback(() => {
-    setMinimizeSidebar((prev) => !prev);
+  const handleToggle = useCallback(() => {
+    setToggleSidebar((prevToggleSidebar) => !prevToggleSidebar);
   }, []);
 
   return (
     <div className="flex h-screen">
-      <SideNavbar minimize={minimizeSidebar} />
-      <div className={`w-full ${minimizeSidebar ? "pl-[160px]" : "pl-[70px]"}`}>
-        <Navbar toggleSidebar={toggleSidebar} />
-        <div className="overflow-auto">{children}</div>
+      <SideNavbar toggleSidebar={toggleSidebar} />
+      <div className={`w-full ${toggleSidebar ? "pl-[160px]" : "pl-[70px]"}`}>
+        <Navbar handleToggle={handleToggle} />
+        {children}
       </div>
     </div>
   );

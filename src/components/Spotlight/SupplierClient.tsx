@@ -1,5 +1,5 @@
 "use client";
-import React, { useCallback, useState } from "react";
+import { useCallback, useState } from "react";
 import Toggle from "../Common/Toggle";
 import { rupeeConverter } from "@/utils/utils";
 
@@ -7,7 +7,9 @@ const SupplierClient = () => {
   const [toggle, setToggle] = useState("clients");
 
   const handleToggle = useCallback(() => {
-    setToggle((prev) => (prev === "clients" ? "suppliers" : "clients"));
+    setToggle((prevToggle) =>
+      prevToggle === "clients" ? "suppliers" : "clients"
+    );
   }, []);
 
   return (

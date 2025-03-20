@@ -1,7 +1,7 @@
 "use client";
-import React, { useCallback, useState } from "react";
-import Toggle from "../Common/Toggle";
+import { useCallback, useState } from "react";
 import Card from "../Common/Card";
+import Toggle from "../Common/Toggle";
 import InventoryOverviewChart from "./InventoryChart";
 import { dailyData, weeklyData } from "@/utils/mock-data";
 
@@ -9,11 +9,13 @@ const InventoryOverview = () => {
   const [timeLine, setTimeLine] = useState("weekly");
 
   const toggleTimeLine = useCallback(() => {
-    setTimeLine((prev) => (prev === "daily" ? "weekly" : "daily"));
+    setTimeLine((prevTimeLine) =>
+      prevTimeLine === "daily" ? "weekly" : "daily"
+    );
   }, []);
 
   return (
-    <Card>
+    <Card className="w-2/5">
       <div className="space-y-2">
         <div className="flex justify-between">
           <div className="space-y-1">
@@ -28,11 +30,9 @@ const InventoryOverview = () => {
             toggle={toggleTimeLine}
           />
         </div>
-        <div className="">
-          <InventoryOverviewChart
-            data={timeLine === "weekly" ? weeklyData : dailyData}
-          />
-        </div>
+        <InventoryOverviewChart
+          data={timeLine === "weekly" ? weeklyData : dailyData}
+        />
       </div>
     </Card>
   );

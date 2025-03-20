@@ -1,5 +1,4 @@
 "use client";
-import React from "react";
 import TrackShipment from "./TrackShipment";
 import { shipmentList } from "@/utils/mock-data";
 

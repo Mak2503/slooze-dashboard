@@ -1,5 +1,5 @@
 import React from "react";
-import MapRoute from "./MapRoute";
+import Image from "next/image";
 
 const TrackLocation = () => {
   const shipmentDetails = [
@@ -26,11 +26,11 @@ const TrackLocation = () => {
   ];
   return (
     <div className="w-3/5 space-y-4">
-      <MapRoute />
+      <Image src="/map-route.svg" alt="map-route" width={450} height={200} />
       <div className="flex items-center">
-        {shipmentDetails.map((detail, index) => (
+        {shipmentDetails.map((detail) => (
           <div
-            key={index}
+            key={detail.name}
             className="border-gray-300 border-r last:border-none px-3 space-y-2"
           >
             <p className="text-xs opacity-30">{detail.name}</p>
