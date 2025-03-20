@@ -2,6 +2,7 @@ import PaymentInfoCard from "@/components/Common/PaymentInfoCard";
 import Header from "@/components/Header";
 import InventoryOverview from "@/components/InventoryOverview/InventoryOverview";
 import ShipmentAnalysis from "@/components/ShipmentAnalytics/ShipmentAnalytics";
+import Spotlight from "@/components/Spotlight/Spotlight";
 import { paymentInfo } from "@/utils/mock-data";
 
 export default function Home() {
@@ -31,6 +32,10 @@ export default function Home() {
           <div className="w-3/5">
             <ShipmentAnalysis />
           </div>
+        </div>
+        {/* Spotlight */}
+        <div>
+          <Spotlight />
         </div>
       </div>
     </main>
