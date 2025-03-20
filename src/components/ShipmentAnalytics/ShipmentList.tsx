@@ -26,7 +26,7 @@ const ShipmentList = () => {
     },
   ];
   return (
-    <div className="w-2/5 max-h-[265px] overflow-auto space-y-4">
+    <div className="scroll-container w-2/5 max-h-[265px] overflow-scroll space-y-4 pr-4">
       {shipmentList.map((list) => (
         <TrackShipment
           key={list.shipmentId}

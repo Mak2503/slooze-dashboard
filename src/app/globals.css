@@ -10,3 +10,25 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Custom scrollbar styles for WebKit browsers (Chrome, Safari, etc.) */
+.scroll-container::-webkit-scrollbar {
+  width: 10px; /* Scrollbar width */
+}
+
+.scroll-container::-webkit-scrollbar-track {
+  background-color: #ECEDEE; /* Track background color */
+  border-radius: 50px; /* Full-rounded borders */
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+  background-color: white; /* Scrollbar background color */
+  border-radius: 50px; /* Full-rounded borders */
+  border: 3px solid #ECEDEE; /* Creates padding between the scrollbar and the track */
+}
+
+/* Force scrollbar always visible in Firefox */
+.scroll-container {
+  scrollbar-width: thin; /* Ensure thin scrollbar in Firefox */
+  scrollbar-color: white #ECEDEE; /* Thumb color and track color in Firefox */
+}
