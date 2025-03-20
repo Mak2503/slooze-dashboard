@@ -1,6 +1,7 @@
 "use client";
 import React, { useCallback, useState } from "react";
 import Toggle from "../Common/Toggle";
+import { rupeeConverter } from "@/utils/utils";
 
 const SupplierClient = () => {
   const [toggle, setToggle] = useState("clients");
@@ -18,12 +19,12 @@ const SupplierClient = () => {
           toggle={handleToggle}
         />
       </div>
-      <div className="bg-primaryBg p-3 rounded-lg flex justify-between items-center text-xs">
-        <div className="flex items-center gap-2">
+      <div className="flex bg-primaryBg justify-between p-3 rounded-lg text-xs items-center">
+        <div className="flex gap-2 items-center">
           <p className="font-semibold">#1</p>
           <p className="text-sm font-bold">Amit Sethi</p>
         </div>
-        <p>{"\u20B9"}2,09,632</p>
+        <p>{rupeeConverter(209632)}</p>
         <p>39% Win/Loss</p>
         <p>118 Orders</p>
       </div>

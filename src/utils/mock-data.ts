@@ -71,3 +71,17 @@ export const topItems: Item[] = [
     value: 220000
   },
 ]
+
+const weekDays = ["Mon", "Tues", "Wed", "Thurs", "Fri", "Sat", "Sun"];
+export const weeklyData = weekDays.map((day) => ({
+  name: day,
+  sales: Math.floor(Math.random() * 5000),
+  purchases: Math.floor(Math.random() * 5000),
+}));
+  
+const dailyTimings = ["6:00AM", "9:00AM", "12:00PM", "3:00PM", "6:00PM", "9:00PM"];
+export const dailyData = dailyTimings.map((time) => ({
+  name: time,
+  sales: Math.floor(Math.random() * 5000),
+  purchases: Math.floor(Math.random() * 5000),
+}));

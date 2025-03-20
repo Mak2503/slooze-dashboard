@@ -37,7 +37,7 @@ const navItems = [
     icon: <ChartColumn />,
   },
   {
-    name: "Analysis",
+    name: "Suppliers",
     icon: <Newspaper />,
   },
   {
@@ -66,7 +66,7 @@ const NavItem: React.FC<{
         {icon}
       </div>
       {minimize && (
-        <p className={`${active && "text-primary font-semibold"} text-sm`}>
+        <p className={`${active && "text-primary font-semibold"} text-sm hover:scale-105 hover:text-primary transition-all`}>
           {name}
         </p>
       )}

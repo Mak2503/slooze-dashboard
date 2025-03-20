@@ -7,49 +7,23 @@ import {
   XAxis,
 } from "recharts";
 
-const data = [
-  {
-    name: "Mon",
-    sales: 4000,
-    purchases: 2400,
-  },
-  {
-    name: "Tues",
-    sales: 3000,
-    purchases: 1398,
-  },
-  {
-    name: "Wed",
-    sales: 2000,
-    purchases: 1800,
-  },
-  {
-    name: "Thurs",
-    sales: 2780,
-    purchases: 3908,
-  },
-  {
-    name: "Fri",
-    sales: 1890,
-    purchases: 4800,
-  },
-  {
-    name: "Sat",
-    sales: 2390,
-    purchases: 3800,
-  },
-  {
-    name: "Sun",
-    sales: 3490,
-    purchases: 4300,
-  },
-];
+type OverviewChartType = {
+  name: string;
+  sales: number;
+  purchases: number;
+};
 
-const InventoryOverviewChart = () => {
+interface OverviewChartProps {
+  data: OverviewChartType[];
+}
+
+const InventoryOverviewChart: React.FC<OverviewChartProps> = ({ data }) => {
   return (
     <>
       <div className="flex items-center relative">
-        <p className="absolute left-[-50px] top-[50%] z-10 transform rotate-270 text-xs text-nowrap opacity-50 w-max h-max">Total items (in 1000s)</p>
+        <p className="h-max text-nowrap text-xs w-max absolute left-[-50px] opacity-50 rotate-270 top-[50%] transform z-10">
+          Total items (in 1000s)
+        </p>
         <ResponsiveContainer width={"100%"} height={250}>
           <BarChart
             data={data}
@@ -72,13 +46,13 @@ const InventoryOverviewChart = () => {
           </BarChart>
         </ResponsiveContainer>
       </div>
-      <div className="flex items-center gap-4 justify-end text-primary text-xxs">
-        <div className="flex items-center gap-1">
-          <div className="h-2 w-2 bg-primary rounded-full"></div>
+      <div className="flex justify-end text-primary text-xxs gap-4 items-center">
+        <div className="flex gap-1 items-center">
+          <div className="bg-primary h-2 rounded-full w-2"></div>
           <span>Sales</span>
         </div>
-        <div className="flex items-center gap-1">
-          <div className="h-2 w-2 bg-[#D6D4F5] rounded-full"></div>
+        <div className="flex gap-1 items-center">
+          <div className="bg-[#D6D4F5] h-2 rounded-full w-2"></div>
           <span>Purchases</span>
         </div>
       </div>
