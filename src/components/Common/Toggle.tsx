@@ -16,7 +16,7 @@ const Toggle: React.FC<ToggleProps> = ({ items, activeItem, toggle }) => {
           onClick={toggle}
           className={`${
             item === activeItem
-              ? "bg-[#4F45E4] text-white rounded-full"
+              ? "bg-primary text-white rounded-full"
               : "opacity-50"
           } w-1/2 px-5 py-1.5 uppercase transition-all duration-300 ease-in-out cursor-pointer`}
         >

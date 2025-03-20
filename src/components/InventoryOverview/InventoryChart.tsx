@@ -72,9 +72,9 @@ const InventoryOverviewChart = () => {
           </BarChart>
         </ResponsiveContainer>
       </div>
-      <div className="flex items-center gap-4 justify-end text-[#4F45E4] text-[10px]">
+      <div className="flex items-center gap-4 justify-end text-primary text-xxs">
         <div className="flex items-center gap-1">
-          <div className="h-2 w-2 bg-[#4F45E4] rounded-full"></div>
+          <div className="h-2 w-2 bg-primary rounded-full"></div>
           <span>Sales</span>
         </div>
         <div className="flex items-center gap-1">

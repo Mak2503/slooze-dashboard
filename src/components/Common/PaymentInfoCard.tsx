@@ -40,14 +40,14 @@ const PaymentInfoCard: React.FC<PaymentInfoCardProps> = ({
         <div className="space-y-1.5">
           <p className="opacity-50">{title}</p>
           <div className="flex gap-2">
-            <p className="text-[26px] font-bold text-[#4F45E4]">
+            <p className="text-[26px] font-bold text-primary">
               {"\u20B9"}
               {amount}
             </p>
             <span
               className={`${
-                percentage! > 0 ? "text-[#19AC59]" : "text-red-500"
-              } text-[10px] flex items-center mt-2`}
+                percentage! > 0 ? "text-green-600" : "text-red-600"
+              } text-xxs flex items-center mt-2`}
             >
               {percentage !== undefined && (
                 <ShowTrend percentage={percentage} />

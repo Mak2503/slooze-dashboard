@@ -18,7 +18,7 @@ const SupplierClient = () => {
           toggle={handleToggle}
         />
       </div>
-      <div className="bg-[#F7F9FB] p-3 rounded-lg flex justify-between items-center text-xs">
+      <div className="bg-primaryBg p-3 rounded-lg flex justify-between items-center text-xs">
         <div className="flex items-center gap-2">
           <p className="font-semibold">#1</p>
           <p className="text-sm font-bold">Amit Sethi</p>

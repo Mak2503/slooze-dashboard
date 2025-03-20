@@ -60,13 +60,13 @@ const NavItem: React.FC<{
     <div className="flex items-center gap-2 cursor-pointer">
       <div
         className={`${
-          active && "text-white bg-[#4F45E4]"
+          active && "text-white bg-primary"
         } text-[#0000007A] p-1.5 rounded-md`}
       >
         {icon}
       </div>
       {minimize && (
-        <p className={`${active && "text-[#4F45E4] font-semibold"} text-sm`}>{name}</p>
+        <p className={`${active && "text-primary font-semibold"} text-sm`}>{name}</p>
       )}
     </div>
   );

@@ -11,7 +11,7 @@ const SideFooter = ({ minimize }: { minimize: boolean }) => {
         </div>
         {minimize && <p>Help</p>}
       </div>
-      <div className="h-0.5 bg-[#0000001A]"></div>
+      <div className="h-0.5 bg-black/10"></div>
       <div className="flex items-center gap-1">
         <div className="bg-[#F4F4F4] p-2 rounded-md">
           <Settings />

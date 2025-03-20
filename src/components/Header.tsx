@@ -3,7 +3,7 @@ import React from "react";
 
 const Header = () => {
   return (
-    <div className="flex justify-between items-center p-5 border-b border-[#E5E5E5]">
+    <div className="flex justify-between items-center p-5 border-b border-borderPrimary">
       <div className="flex gap-4">
         <div className="p-2 flex justify-center items-center bg-white rounded-md">
           <Image
@@ -18,15 +18,15 @@ const Header = () => {
           <p className="text-sm text-gray-500">ORUE PVT. LTD.</p>
         </div>
         <div className="ml-2">
-          <button className="uppercase text-[11px] text-white font-bold px-4 py-2 bg-[#4F45E4] rounded-lg">
+          <button className="uppercase text-xxs text-white font-bold px-4 py-2 bg-primary rounded-lg">
             Customer
           </button>
         </div>
       </div>
       <div>
-        <select className="text-[11px] rounded-md border border-[#E5E5E5] p-2 font-bold">
+        <select className="text-xxs rounded-md border border-borderPrimary p-2 font-bold">
           <option>Last 15 DAYS</option>
-          <option defaultValue={'Last 30 DAYS'}>Last 30 DAYS</option>
+          <option>Last 30 DAYS</option>
           <option>Last 60 DAYS</option>
         </select>
       </div>

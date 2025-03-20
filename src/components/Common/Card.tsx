@@ -9,7 +9,7 @@ const Card = ({
   className?: string;
 }) => {
   return (
-    <div className={twMerge(`p-3.5 w-full border border-[#E5E5E5] bg-white rounded-xl`, className)}>
+    <div className={twMerge(`p-3.5 w-full border border-borderPrimary bg-white rounded-xl`, className)}>
       {children}
     </div>
   );

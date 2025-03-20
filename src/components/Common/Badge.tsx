@@ -10,7 +10,7 @@ const Badge = ({
 }) => {
   return (
     <div
-      className={twMerge(`flex h-max items-center gap-1 text-[11px] font-bold bg-[#F7F9FB] border border-[#E5E5E5] p-1 rounded-full`, className)}
+      className={twMerge(`flex h-max items-center gap-1 text-xxs font-bold bg-primaryBg border border-borderPrimary p-1 rounded-full`, className)}
     >
       {children}
     </div>
