@@ -34,9 +34,7 @@ export default function Home() {
           </div>
         </div>
         {/* Spotlight */}
-        <div>
-          <Spotlight />
-        </div>
+        <Spotlight />
       </div>
     </main>
   );

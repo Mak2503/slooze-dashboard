@@ -22,10 +22,7 @@ const TrackShipment: React.FC<TrackShipmentProps> = ({
           <p className='text-[10px] opacity-50'>Shipment ID</p>
           <p className='font-bold'>{shipmentId}</p>
         </div>
-        <div>
-          {/* Image */}
-          <Image src='/truck.svg' alt='truck' width={110} height={55} />
-        </div>
+        <Image src='/truck-with-progress.svg' alt='truck' width={110} height={55} />
       </div>
       <div className='flex items-center gap-2 text-[10px]'>
         <div className='flex items-center gap-2'>
