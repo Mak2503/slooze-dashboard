@@ -7,7 +7,7 @@ export type Item = {
   id: number;
   name: string;
   units: number;
-  value: string;
+  value: number;
 };
 
 interface TopItemsListProps {
@@ -23,8 +23,8 @@ const TopItemsList: React.FC<TopItemsListProps> = ({ title, items }) => {
   }, []);
 
   return (
-    <div className="w-1/2 border-l border-gray-300 pl-4 space-y-4">
-      <div className="flex items-center justify-between w-full">
+    <div className="border-gray-300 border-l w-1/2 pl-4 space-y-4">
+      <div className="flex justify-between w-full items-center">
         <h3 className="font-bold">{title}</h3>
         <Toggle items={["value", "vol."]} activeItem={tab} toggle={toggleTab} />
       </div>
