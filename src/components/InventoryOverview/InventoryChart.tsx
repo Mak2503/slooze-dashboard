@@ -24,7 +24,7 @@ const InventoryOverviewChart: React.FC<OverviewChartProps> = ({ data }) => {
         <p className="h-max text-nowrap text-xs w-max absolute left-[-50px] opacity-50 rotate-270 top-[50%] transform z-10">
           Total items (in 1000s)
         </p>
-        <ResponsiveContainer width={"100%"} height={250}>
+        <ResponsiveContainer width={"100%"} height={205}>
           <BarChart
             data={data}
             margin={{
@@ -34,15 +34,25 @@ const InventoryOverviewChart: React.FC<OverviewChartProps> = ({ data }) => {
               bottom: 5,
             }}
           >
-            <CartesianGrid strokeDasharray="4 4" />
+            <CartesianGrid vertical={false} strokeDasharray="4 4" />
             <XAxis
               dataKey="name"
               fontSize={12}
               tickLine={false}
               axisLine={false}
             />
-            <Bar dataKey="sales" fill="#4F45E4" radius={[4, 4, 0, 0]} />
-            <Bar dataKey="purchases" fill="#D6D4F5" radius={[4, 4, 0, 0]} />
+            <Bar
+              dataKey="sales"
+              barSize={15}
+              fill="#4F45E4"
+              radius={[4, 4, 0, 0]}
+            />
+            <Bar
+              dataKey="purchases"
+              barSize={15}
+              fill="#D6D4F5"
+              radius={[4, 4, 0, 0]}
+            />
           </BarChart>
         </ResponsiveContainer>
       </div>

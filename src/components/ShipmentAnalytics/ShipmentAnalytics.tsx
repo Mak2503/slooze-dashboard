@@ -9,15 +9,15 @@ const ShipmentAnalytics = () => {
   return (
     <Card>
       <div className="space-y-4">
-        <div className="flex items-center justify-between">
+        <div className="flex justify-between items-center">
           <h3 className="w-1/3 font-bold">Shipment Analytics</h3>
-          <div className="w-2/3 flex items-center gap-4">
-            <Badge className="rounded-md p-2">
+          <div className="flex w-2/3 gap-4 items-center">
+            <Badge className="p-2 rounded-md">
               <SlidersHorizontal size={16} />
-              <h4 className="uppercase font-bold text-xs">filters</h4>
+              <h4 className="text-xs font-bold uppercase">filters</h4>
             </Badge>
             <Badge className="px-3.5 py-1.5">
-              <p className="opacity-60 uppercase text-xs">
+              <p className="text-xs opacity-60 uppercase">
                 ID: <strong>#003455MNP</strong>
               </p>
             </Badge>
