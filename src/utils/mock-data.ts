@@ -1,3 +1,5 @@
+import { Item } from "@/components/Spotlight/TopItemsList";
+
 export const paymentInfo = [
   {
     id: 1,
@@ -22,7 +24,7 @@ export const paymentInfo = [
     title: "Total Purchases",
     iconPath: "/shopping-cart.svg",
     amount: "15,20,000",
-    percentage: 3.87,
+    percentage: -5.89,
     subText: "suppliers: 6",
     iconBgColor: "bg-[#FF900D1A]",
   },
@@ -36,3 +38,36 @@ export const paymentInfo = [
     iconBgColor: "bg-[#7A21EB1A]",
   },
 ];
+
+export const topItems: Item[] = [
+  {
+    id: 1,
+    name: "Automotive Parts",
+    units: 850,
+    value: "2,00,000"
+  },
+  {
+    id: 2,
+    name: "Steel Sheets",
+    units: 430,
+    value: "2,00,000"
+  },
+  {
+    id: 3,
+    name: "Electronic Parts",
+    units: 300,
+    value: "2,00,000"
+  },
+  {
+    id: 4,
+    name: "Plastic Materials",
+    units: 400,
+    value: "2,00,000"
+  },
+  {
+    id: 5,
+    name: "Office Equipments",
+    units: 150,
+    value: "2,00,000"
+  },
+]

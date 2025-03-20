@@ -5,7 +5,7 @@ import SupplierClient from "./SupplierClient";
 
 const SpotlightMap = () => {
   return (
-    <div className="w-2/4">
+    <div className="w-5/12">
       <div className="flex justify-between items-center">
         <h3 className="font-bold">Spotlight</h3>
         <Badge className="rounded-md p-2">ALL REGIONS</Badge>
