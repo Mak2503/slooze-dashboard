@@ -57,7 +57,7 @@ const NavItem: React.FC<{
   minimize: boolean;
 }> = ({ active = false, icon, name, minimize }) => {
   return (
-    <div className="flex items-center gap-2 cursor-pointer">
+    <div className="flex cursor-pointer gap-2 items-center">
       <div
         className={`${
           active && "text-white bg-primary"
@@ -66,7 +66,9 @@ const NavItem: React.FC<{
         {icon}
       </div>
       {minimize && (
-        <p className={`${active && "text-primary font-semibold"} text-sm`}>{name}</p>
+        <p className={`${active && "text-primary font-semibold"} text-sm`}>
+          {name}
+        </p>
       )}
     </div>
   );

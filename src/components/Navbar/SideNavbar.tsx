@@ -5,11 +5,15 @@ import SideFooter from "./SideFooter";
 
 const SideNavbar = ({ minimize }: { minimize: boolean }) => {
   return (
-    <div className={`fixed left-0 top-0 ${minimize ? "w-[160px]" : "w-[70px]"} h-full z-20 bg-white py-6 px-3 border-r border-[#0000001A] flex flex-col justify-between`}>
+    <div
+      className={`fixed left-0 top-0 ${
+        minimize ? "w-[160px]" : "w-[70px]"
+      } h-full z-20 bg-white py-6 px-3 border-r border-[#0000001A] flex flex-col justify-between`}
+    >
       <div className="space-y-8">
-        <div className="flex items-center gap-2">
+        <div className="flex gap-2 items-center">
           <Image src={"/slooze-logo.svg"} width={40} height={40} alt="logo" />
-          {minimize && <h2 className="font-semibold text-2xl">Slooze</h2>}
+          {minimize && <h2 className="text-2xl font-semibold">Slooze</h2>}
         </div>
         <NavList minimize={minimize} />
       </div>
