@@ -39,6 +39,33 @@ export const paymentInfo = [
   },
 ];
 
+export const shipmentList = [
+  {
+    shipmentId: "#003455MNP",
+    from: "87 Some Address",
+    to: "15 Some Address",
+    progress: 63
+  },
+  {
+    shipmentId: "#001432LDP",
+    from: "90 Some Address",
+    to: "20 Some Address",
+    progress: 20
+  },
+  {
+    shipmentId: "#009822MKS",
+    from: "87 Some Address",
+    to: "15 Some Address",
+    progress: 90
+  },
+  {
+    shipmentId: "#009873KSP",
+    from: "87 Some Address",
+    to: "15 Some Address",
+    progress: 70
+  },
+];
+
 export const topItems: Item[] = [
   {
     id: 1,
