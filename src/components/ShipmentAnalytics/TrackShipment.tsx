@@ -16,7 +16,6 @@ const TrackShipment: React.FC<TrackShipmentProps> = ({
   to,
   progress,
 }) => {
-  console.log("Rendered");
   return (
     <div className="bg-primaryBg rounded-lg pl-4 py-3">
       <div className="flex justify-between pr-1">

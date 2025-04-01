@@ -5,6 +5,9 @@ import {
   ResponsiveContainer,
   XAxis,
 } from "recharts";
+import { ThemeContext } from "../App";
+import { useContext } from "react";
+import { themeSelector } from "@/utils/utils";
 
 type InventoryOverviewChartDataType = {
   name: string;
@@ -19,6 +22,8 @@ interface InventoryOverviewChartProps {
 const InventoryOverviewChart: React.FC<InventoryOverviewChartProps> = ({
   data,
 }) => {
+  const { theme } = useContext(ThemeContext);
+  const lightTheme = themeSelector(theme, "light");
   return (
     <>
       <div className="flex items-center relative">
@@ -45,25 +50,25 @@ const InventoryOverviewChart: React.FC<InventoryOverviewChartProps> = ({
             <Bar
               dataKey="sales"
               barSize={15}
-              fill="#4F45E4"
+              fill={theme}
               radius={[4, 4, 0, 0]}
             />
             <Bar
               dataKey="purchases"
               barSize={15}
-              fill="#D6D4F5"
+              fill={lightTheme}
               radius={[4, 4, 0, 0]}
             />
           </BarChart>
         </ResponsiveContainer>
       </div>
-      <div className="flex justify-end text-primary text-xxs gap-4 items-center">
+      <div className="flex justify-end text-xxs gap-4 items-center" style={{ color: theme }}>
         <div className="flex gap-1 items-center">
-          <div className="bg-primary h-2 rounded-full w-2"></div>
+          <div className="h-2 rounded-full w-2" style={{ backgroundColor: theme }}></div>
           <span>Sales</span>
         </div>
         <div className="flex gap-1 items-center">
-          <div className="bg-[#D6D4F5] h-2 rounded-full w-2"></div>
+          <div className="h-2 rounded-full w-2" style={{ backgroundColor: lightTheme }}></div>
           <span>Purchases</span>
         </div>
       </div>

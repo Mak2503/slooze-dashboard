@@ -1,7 +1,10 @@
+"use client"
 import Image from "next/image";
 import Card from "../Common/Card";
 import { MoveDownRight, MoveUpRight } from "lucide-react";
 import { rupeeConverter } from "@/utils/utils";
+import { ThemeContext } from "../App";
+import { useContext } from "react";
 
 interface OverviewCardProps {
   title: string;
@@ -34,13 +37,14 @@ const OverviewCard: React.FC<OverviewCardProps> = ({
   subText,
   iconBgColor,
 }) => {
+  const { theme } = useContext(ThemeContext);
   return (
     <Card>
       <div className="flex justify-between">
         <div className="space-y-1.5">
           <p className="opacity-50">{title}</p>
           <div className="flex gap-2">
-            <p className="text-[26px] text-primary font-bold">
+            <p className="text-[26px] font-bold" style={{ color: theme }}>
               {rupeeConverter(amount)}
             </p>
             <span

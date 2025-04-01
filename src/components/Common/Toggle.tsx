@@ -1,5 +1,6 @@
-import React from "react";
+import { useContext } from "react";
 import Badge from "./Badge";
+import { ThemeContext } from "../App";
 
 interface ToggleProps {
   items: string[];
@@ -8,6 +9,7 @@ interface ToggleProps {
 }
 
 const Toggle: React.FC<ToggleProps> = ({ items, activeItem, toggle }) => {
+  const { theme } = useContext(ThemeContext);
   return (
     <Badge>
       {items.map((item) => (
@@ -16,9 +18,10 @@ const Toggle: React.FC<ToggleProps> = ({ items, activeItem, toggle }) => {
           onClick={toggle}
           className={`${
             item === activeItem
-              ? "bg-primary text-white rounded-full"
+              ? "text-white rounded-full"
               : "opacity-50"
           } w-1/2 px-5 py-1.5 uppercase transition-all duration-300 ease-in-out cursor-pointer`}
+          style={{ backgroundColor: item === activeItem ? theme : "" }}
         >
           {item}
         </div>

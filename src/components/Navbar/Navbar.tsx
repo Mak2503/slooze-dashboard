@@ -1,11 +1,18 @@
-import { memo } from "react";
+import { memo, useContext } from "react";
 import { Bell, Calendar, PanelLeftDashedIcon, Settings } from "lucide-react";
 import Input from "../Common/Input";
 import Image from "next/image";
+import { ThemeContext } from "../App";
+import { themeSelector } from "@/utils/utils";
 
 const Navbar = ({ handleToggle }: { handleToggle: () => void }) => {
+  const { theme } = useContext(ThemeContext);
+  const darkTheme = themeSelector(theme, "dark");
   return (
-    <div className="flex bg-primary justify-between items-center px-6 py-3.5">
+    <div
+      className={`flex justify-between items-center px-6 py-3.5`}
+      style={{ backgroundColor: theme }}
+    >
       <div className="flex gap-4 items-center">
         <PanelLeftDashedIcon
           color="white"
@@ -19,7 +26,10 @@ const Navbar = ({ handleToggle }: { handleToggle: () => void }) => {
         <Calendar color="white" size={20} />
         <Bell color="white" size={20} />
         <Settings color="white" size={20} />
-        <div className="flex bg-[#3830B7] rounded-lg gap-2 items-center px-4 py-2">
+        <div
+          className="flex rounded-lg gap-2 items-center px-4 py-2"
+          style={{ backgroundColor: darkTheme }}
+        >
           <div className="text-white text-xxs">
             <p>rohan@etis.xyz</p>
             <p>ETLS PVT. LTD.</p>

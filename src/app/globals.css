@@ -7,6 +7,25 @@
   --text-xxs: 10px;
 }
 
+/* .blue {
+  @theme {
+    --color-primary: #4F45E4;
+  }
+}
+
+.red {
+  @theme {
+    --color-primary: red;
+  }
+}
+
+.green {
+  @theme {
+    --color-primary: green;
+  }
+} */
+
+
 :root {
   --background: #F7F9FB;
   --foreground: #171717;

@@ -112,3 +112,31 @@ export const dailyData = dailyTimings.map((time) => ({
   sales: Math.floor(Math.random() * 5000),
   purchases: Math.floor(Math.random() * 5000),
 }));
+
+export const colorOptions = [
+  {
+    label: "Blue",
+    value: "#4F45E4",
+    options: {
+      light: "#D6D4F5",
+      dark: "#3830B7",
+    }
+  },
+  {
+    label: "Green",
+    value: "green",
+    options: {
+      light: "lightgreen",
+      dark: "darkgreen",
+    }
+  },
+  {
+    label: "Red",
+    value: "red",
+    options: {
+      light: "#FFCCCB",
+      // dark: "darkred",
+      dark: "#cc0000"
+    }
+  },
+];

@@ -1,8 +1,13 @@
 import { Search } from "lucide-react";
+import { ThemeContext } from "../App";
+import { useContext } from "react";
+import { themeSelector } from "@/utils/utils";
 
 const Input: React.FC<{ placeholder: string }> = ({ placeholder }) => {
+  const { theme } = useContext(ThemeContext);
+  const darkTheme = themeSelector(theme, "dark");
   return (
-    <div className="flex bg-[#3830B7] rounded-lg text-white gap-2 items-center px-2 py-1.5">
+    <div className="flex rounded-lg text-white gap-2 items-center px-2 py-1.5" style={{ background: darkTheme }}>
       <Search size={20} />
       <input
         type="text"

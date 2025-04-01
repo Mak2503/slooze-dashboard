@@ -1,6 +1,10 @@
+"use client";
 import Image from "next/image";
+import { useContext } from "react";
+import { ThemeContext } from "./App";
 
 const Header = () => {
+  const { theme } = useContext(ThemeContext);
   return (
     <div className="flex border-b border-borderPrimary justify-between p-5 items-center">
       <div className="flex gap-4">
@@ -16,7 +20,10 @@ const Header = () => {
           <h2 className="text-2xl font-semibold">Hello, Rahul</h2>
           <p className="text-gray-500 text-sm">ORUE PVT. LTD.</p>
         </div>
-        <button className="bg-primary h-max rounded-lg text-white text-xxs font-bold ml-2 px-4 py-2 uppercase">
+        <button
+          className="h-max rounded-lg text-white text-xxs font-bold ml-2 px-4 py-2 uppercase"
+          style={{ backgroundColor: theme }}
+        >
           Customer
         </button>
       </div>
