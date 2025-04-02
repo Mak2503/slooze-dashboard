@@ -1,26 +1,29 @@
-import React from "react";
+"use client";
+import { useContext } from "react";
 import Image from "next/image";
+import { LocaleContext } from "../App";
 
 const TrackLocation = () => {
+  const { t } = useContext(LocaleContext);
   const shipmentDetails = [
     {
-      name: "Shipment ID",
+      name: "shipmentid",
       value: "#0124BCD",
     },
     {
-      name: "Category",
+      name: "category",
       value: "Electronics",
     },
     {
-      name: "Total Weight",
+      name: "totalweight",
       value: "329 kgs",
     },
     {
-      name: "Destination",
+      name: "destination",
       value: "Bangalore",
     },
     {
-      name: "Est Arrival",
+      name: "estarrival",
       value: "2 Hrs",
     },
   ];
@@ -33,7 +36,7 @@ const TrackLocation = () => {
             key={detail.name}
             className="border-gray-300 border-r last:border-none px-3 space-y-2"
           >
-            <p className="text-xs opacity-30">{detail.name}</p>
+            <p className="text-xs opacity-30">{t(`shipmentanalytics.${detail.name}`)}</p>
             <p className="text-sm font-semibold">{detail.value}</p>
           </div>
         ))}

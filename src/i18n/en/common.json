@@ -1,0 +1,83 @@
+{
+  "common": {
+    "hello": "Hello",
+    "welcome": "Welcome to our app!",
+    "filters": "Filters"
+  },
+  "navbar": {
+    "search": "Search"
+  },
+  "header": {
+    "customer": "Customer"
+  },
+  "navlist": {
+    "dashboard": "Dashboard",
+    "contacts": "Contacts",
+    "documents": "Documents",
+    "analysis": "Analysis",
+    "files": "Files",
+    "reports": "Reports",
+    "suppliers": "Suppliers",
+    "shop": "Shop",
+    "code": "Code",
+    "help": "Help",
+    "settings": "Settings"
+  },
+  "overview": {
+    "title": {
+      "Payment Receivables": "Payment Receivables",
+      "Payment Made": "Payment Made",
+      "Total Purchases": "Total Purchases",
+      "Total Sales": "Total Sales"
+    },
+    "subText": {
+      "overdue payments": {
+        "text": "Overdue payments",
+        "subItem": "1,40,000"
+      },
+      "next payment due": {
+        "text": "Next payment due",
+        "subItem": "1 week"
+      },
+      "suppliers": {
+        "text": "Suppliers",
+        "subItem": "2"
+      },
+      "top selling product": {
+        "text": "Top Selling Product",
+        "subItem": "Electronics"
+      }
+    }
+  },
+  "toggle": {
+    "daily": "Daily",
+    "weekly": "Weekly",
+    "suppliers": "Suppliers",
+    "clients": "Clients",
+    "value": "Value",
+    "vol.": "Vol."
+  },
+  "inventoryoverview": {
+    "title": "Inventory Overview",
+    "instockproducts": "In-Stock Products",
+    "units": "Units"
+  },
+  "shipmentanalytics": {
+    "title": "Shipment Analysis",
+    "shipment": "Shipment",
+    "shipmentid": "Shipment ID",
+    "category": "Category",
+    "totalweight": "Total Weight",
+    "destination": "Destination",
+    "estarrival": "Est. Arrival"
+  },
+  "spotlight": {
+    "title": "Spotlight",
+    "allregions": "All Regions",
+    "topitems": {
+      "title": "Top Items",
+      "sold": "Sold",
+      "purchased": "Purchased"
+    }
+  }
+}

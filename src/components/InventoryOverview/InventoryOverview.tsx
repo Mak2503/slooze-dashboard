@@ -1,11 +1,13 @@
 "use client";
-import { useCallback, useState } from "react";
+import { useCallback, useContext, useState } from "react";
 import Card from "../Common/Card";
 import Toggle from "../Common/Toggle";
 import InventoryOverviewChart from "./InventoryChart";
 import { dailyData, weeklyData } from "@/utils/mock-data";
+import { LocaleContext } from "../App";
 
 const InventoryOverview = () => {
+  const { t } = useContext(LocaleContext);
   const [timeLine, setTimeLine] = useState("weekly");
 
   const toggleTimeLine = useCallback(() => {
@@ -19,9 +21,9 @@ const InventoryOverview = () => {
       <div className="space-y-2">
         <div className="flex justify-between">
           <div className="space-y-1">
-            <h3 className="font-bold">Inventory Overview</h3>
+            <h3 className="font-bold">{t("inventoryoverview.title")}</h3>
             <p className="text-xs opacity-60">
-              In-Stock Products: <strong>3,200 Units</strong>
+              {t("inventoryoverview.instockproducts")}: <strong>3,200 {t("inventoryoverview.units")}</strong>
             </p>
           </div>
           <Toggle

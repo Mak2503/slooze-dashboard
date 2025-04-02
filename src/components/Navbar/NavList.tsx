@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import {
   BookUser,
   Box,
@@ -12,6 +12,7 @@ import {
   SquareCode,
 } from "lucide-react";
 import NavItem from "./NavItem";
+import { LocaleContext } from "../App";
 
 const navItems = [
   {
@@ -54,12 +55,14 @@ const navItems = [
 
 const NavList = ({ toggleSidebar }: { toggleSidebar: boolean }) => {
   const [selectedTab, setSelectedTab] = useState("Dashboard");
+  const { t } = useContext(LocaleContext);
   return (
     <div className="space-y-4">
       {navItems.map((item, index) => (
         <div key={index} onClick={() => setSelectedTab(item.name)}>
           <NavItem
             {...item}
+            name={t(`navlist.${item.name.toLocaleLowerCase()}`)}
             active={selectedTab === item.name}
             toggleSidebar={toggleSidebar}
           />

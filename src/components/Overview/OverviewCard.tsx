@@ -12,6 +12,7 @@ interface OverviewCardProps {
   amount: number;
   percentage?: number;
   subText: string;
+  subItem: string;
   iconBgColor?: string;
 }
 
@@ -35,6 +36,7 @@ const OverviewCard: React.FC<OverviewCardProps> = ({
   amount,
   percentage,
   subText,
+  subItem,
   iconBgColor,
 }) => {
   const { theme } = useContext(ThemeContext);
@@ -56,7 +58,7 @@ const OverviewCard: React.FC<OverviewCardProps> = ({
             </span>
           </div>
           <p className="text-xs font-semibold opacity-30 uppercase">
-            {subText}
+            {subText}: {subItem}
           </p>
         </div>
         <div

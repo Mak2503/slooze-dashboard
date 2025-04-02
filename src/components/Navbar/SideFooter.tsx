@@ -1,9 +1,10 @@
 import { Settings } from "lucide-react";
-import { ThemeContext } from "../App";
+import { LocaleContext, ThemeContext } from "../App";
 import { useContext } from "react";
 
 const SideFooter = ({ toggleSidebar }: { toggleSidebar: boolean }) => {
   const { theme } = useContext(ThemeContext);
+  const { t } = useContext(LocaleContext);
   return (
     <div className="space-y-4">
       <div className="flex border-b-2 border-black/10 gap-1 items-center py-4">
@@ -20,13 +21,13 @@ const SideFooter = ({ toggleSidebar }: { toggleSidebar: boolean }) => {
             fill={theme}
           />
         </svg>
-        {toggleSidebar && <p>Help</p>}
+        {toggleSidebar && <p>{t("navlist.help")}</p>}
       </div>
       <div className="flex gap-1 items-center">
         <div className="bg-[#F4F4F4] p-2 rounded-md">
           <Settings />
         </div>
-        {toggleSidebar && <p>Settings</p>}
+        {toggleSidebar && <p className="overflow-hidden">{t("navlist.settings")}</p>}
       </div>
     </div>
   );

@@ -7,7 +7,8 @@ export const paymentInfo = [
     iconPath: "/money-bag.svg",
     amount: 1240000,
     percentage: 3.87,
-    subText: "Overdue payments: 1,40,000",
+    subText: "overdue payments",
+    subItem: "1,40,000",
     iconBgColor: "#05BF8F1A",
   },
   {
@@ -16,7 +17,8 @@ export const paymentInfo = [
     iconPath: "/cash.svg",
     amount: 950000,
     percentage: undefined,
-    subText: "next payment due: 1 week",
+    subText: "next payment due",
+    subItem: "1 week",
     iconBgColor: "#4F45E41A",
   },
   {
@@ -25,7 +27,8 @@ export const paymentInfo = [
     iconPath: "/shopping-cart.svg",
     amount: 1520000,
     percentage: -5.89,
-    subText: "suppliers: 6",
+    subText: "suppliers",
+    subItem: "6",
     iconBgColor: "#FF900D1A",
   },
   {
@@ -34,7 +37,8 @@ export const paymentInfo = [
     iconPath: "/chart-line.svg",
     amount: 1800000,
     percentage: 3.87,
-    subText: "top selling product: electronics",
+    subText: "top selling product",
+    subItem: "electronics",
     iconBgColor: "#7A21EB1A",
   },
 ];

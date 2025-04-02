@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Urbanist } from "next/font/google";
 import App from "@/components/App";
+import HTML from "@/components/HTML";
+import I18nProvider from "@/components/I18nProvider";
 
 const urbanist = Urbanist({ subsets: ["latin"] });
 
@@ -16,12 +18,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <HTML>
+      <I18nProvider />
       <body className={urbanist.className}>
         <App>
           {children}
         </App>
       </body>
-    </html>
+    </HTML>
   );
 }

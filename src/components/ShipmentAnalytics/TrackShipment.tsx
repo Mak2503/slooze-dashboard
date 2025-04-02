@@ -1,7 +1,8 @@
 import { MoveRight } from "lucide-react";
 import Image from "next/image";
-import React from "react";
+import React, { useContext } from "react";
 import TruckWithProgress from "./TruckWithProgress";
+import { LocaleContext } from "../App";
 
 interface TrackShipmentProps {
   shipmentId: string;
@@ -16,11 +17,12 @@ const TrackShipment: React.FC<TrackShipmentProps> = ({
   to,
   progress,
 }) => {
+  const { t } = useContext(LocaleContext);
   return (
     <div className="bg-primaryBg rounded-lg pl-4 py-3">
       <div className="flex justify-between pr-1">
         <div className="space-y-2">
-          <p className="text-xxs opacity-50">Shipment ID</p>
+          <p className="text-xxs opacity-50">{t("shipmentanalytics.shipment")} ID</p>
           <p className="font-bold">{shipmentId}</p>
         </div>
         <TruckWithProgress progress={progress} />

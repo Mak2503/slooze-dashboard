@@ -1,0 +1,85 @@
+{
+  "common": {
+    "hello": "Hola",
+    "welcome": "Bienvenido a nuestra app!",
+    "filters": "Filtros",
+    "last": "Últimos",
+    "days": "Días"
+  },
+  "navbar": {
+    "search": "Buscar"
+  },
+  "header": {
+    "customer": "Cliente"
+  },
+  "navlist": {
+    "dashboard": "Tablero",
+    "contacts": "Contactos",
+    "documents": "Documentos",
+    "analysis": "Análisis",
+    "files": "Archivos",
+    "reports": "Informes",
+    "suppliers": "Proveedores",
+    "shop": "Tienda",
+    "code": "Código",
+    "help": "Ayuda",
+    "settings": "Configuraciones"
+  },
+  "overview": {
+    "title": {
+      "Payment Receivables": "Pagos por cobrar",
+      "Payment Made": "Pagos realizados",
+      "Total Purchases": "Compras totales",
+      "Total Sales": "Ventas totales"
+    },
+    "subText": {
+      "overdue payments": {
+        "text": "Pagos vencidos",
+        "subItem": "1,40,000"
+      },
+      "next payment due": {
+        "text": "Próximo pago",
+        "subItem": "1 semana"
+      },
+      "suppliers": {
+        "text": "Proveedores",
+        "subItem": "2"
+      },
+      "top selling product": {
+        "text": "Producto más vendido",
+        "subItem": "Electrónico"
+      }
+    }
+  },
+  "toggle": {
+    "daily": "Diario",
+    "weekly": "Semanal",
+    "suppliers": "Proveedores",
+    "clients": "Clientes",
+    "value": "Valor",
+    "vol.": "Vol."
+  },
+  "inventoryoverview": {
+    "title": "Resumen de inventario",
+    "instockproducts": "Productos en stock",
+    "units": "Unidades"
+  },
+  "shipmentanalytics": {
+    "title": "Análisis de envío",
+    "shipment": "Envío",
+    "shipmentid": "Envío ID",
+    "category": "Categoría",
+    "totalweight": "Peso total",
+    "destination": "Destino",
+    "estarrival": "Llegada estimada"
+  },
+  "spotlight": {
+    "title": "Destacados",
+    "allregions": "Todas las regiones",
+    "topitems": {
+      "title": "Artículos más",
+      "sold": "Vendidos",
+      "purchased": "Comprados"
+    }
+  }
+}
